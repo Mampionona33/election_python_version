@@ -1,0 +1,25 @@
+version: "3"
+services:
+  django-app:
+    build:
+      context: .
+    ports:
+      - "8000:80"
+    command: ["apache2ctl", "-D", "FOREGROUND"]
+    depends_on:
+      - db
+      - apache
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+
+  apache:
+    build:
+      context: .
+    ports:
+      - "80:80"
+    command: ["apache2ctl", "-D", "FOREGROUND"]

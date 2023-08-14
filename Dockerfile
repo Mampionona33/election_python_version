@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y apache2 apache2-utils && apt-get clean
 # Install postgre client and necessary system dependencies for psycopg2
 RUN apt-get install -y libpq-dev postgresql-client
 
-# Install Apache development package with 'apxs'
+# Install apache2-dev package (required for mod-wsgi)
 RUN apt-get install -y apache2-dev
 
 # Install pip for Python 3
@@ -25,9 +25,3 @@ RUN pip install mod-wsgi
 
 # Install Django
 RUN pip install Django
-
-# Expose port 80
-EXPOSE 80
-
-# Start Apache in the foreground
-CMD ["apache2ctl", "-D", "FOREGROUND"]
