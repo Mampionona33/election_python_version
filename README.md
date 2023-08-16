@@ -7,7 +7,8 @@ docker-comose ps
 
 3- Run the following commande to navigate to the django container
 docker exec -it <constainer_name_on_the_services_in_docker-compose_file> bash
-<!-- ex: election_python_version_django-app_1  -->
+
+<!-- ex: docker exec -it election_python_version_django-app_1 bash -->
 
 4- To initialize the project for the first time, run the next command
 django-admin startproject <main_project_folder_namemod-wsgi>

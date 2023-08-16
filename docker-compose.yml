@@ -6,9 +6,9 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:80"
+      - "8000:80" # Mappage du port 80 du conteneur vers le port 8000 de l'hôte
     volumes:
-      - ./django_project/:/app
+      - ./:/django_project
     command: ["apache2ctl", "-D", "FOREGROUND"]
     depends_on:
       - db
@@ -30,7 +30,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./django_project/:/app
+      - ./:/django_project
 
 volumes:
   pgdata:
