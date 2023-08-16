@@ -1,10 +1,14 @@
 version: "3"
+
 services:
   django-app:
     build:
       context: .
+      dockerfile: Dockerfile
     ports:
       - "8000:80"
+    volumes:
+      - ./django_project/:/app
     command: ["apache2ctl", "-D", "FOREGROUND"]
     depends_on:
       - db
@@ -16,10 +20,17 @@ services:
       POSTGRES_DB: mydatabase
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
+    volumes:
+      - pgdata:/var/lib/postgresql/data
 
   apache:
     build:
       context: .
+      dockerfile: Dockerfile
     ports:
       - "80:80"
-    command: ["apache2ctl", "-D", "FOREGROUND"]
+    volumes:
+      - ./django_project/:/app
+
+volumes:
+  pgdata:
