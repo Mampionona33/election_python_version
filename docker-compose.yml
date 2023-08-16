@@ -9,7 +9,7 @@ services:
       - "8000:80" # Mappage du port 80 du conteneur vers le port 8000 de l'hôte
     volumes:
       - ./:/django_project
-    command: ["apache2ctl", "-D", "FOREGROUND"]
+    command: ["python3", "./app/manage.py", "runserver", "0.0.0.0:8000"]
     depends_on:
       - db
       - apache
@@ -31,6 +31,7 @@ services:
       - "80:80"
     volumes:
       - ./:/django_project
+    command: ["apache2ctl", "-D", "FOREGROUND"]
 
 volumes:
   pgdata:
