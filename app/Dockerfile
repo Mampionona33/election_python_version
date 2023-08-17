@@ -14,4 +14,4 @@ RUN pip install --upgrade pip setuptools && \
 # RUN /election_python_version/bin/pip install --upgrade pip setuptools && \
 #     /election_python_version/bin/pip install -r requirements.txt
 
-EXPOSE 80
+EXPOSE 8000
