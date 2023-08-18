@@ -51,12 +51,15 @@ Ce projet a été créé pour explorer et prendre en main le framework Django, u
 8. **Configuration des Containers Docker :** Créez les fichiers `docker-compose.yml` et `Dockerfile` pour configurer les containers Docker pour le projet. Ces fichiers spécifient comment le projet doit être exécuté dans un environnement de conteneur Docker isolé.
 
 9. **Lancement du Serveur Django avec Docker :** Activez l'environnement virtuel avec la commande `source venv/bin/activate`, puis lancez le serveur Django en utilisant Docker Compose :
+
    ```bash
    docker-compose up
    ```
 
+10. **Accéder à l'Application Web :** Ouvrez un navigateur web et accédez à l'URL `http://localhost:8000` ou `http://0.0.0.0:8000` (ou le port que vous avez défini dans votre `docker-compose.yml`) pour visualiser et interagir avec votre application Django.
+
 ## Objectif du Projet
 
-L'objectif de ce projet est de fournir une introduction pratique à Django en utilisant Docker pour la gestion de l'environnement de développement. Il couvre les étapes essentielles pour mettre en place un projet Django, gérer la base de données et exécuter l'application dans un conteneur Docker isolé.
+L'objectif de ce projet est de fournir une introduction pratique à Django en utilisant Docker pour la gestion de l'environnement de développement. Il couvre les étapes essentielles pour mettre en place un projet Django, gérer la base de données, exécuter l'application dans un conteneur Docker isolé et visualiser le résultat dans un navigateur web.
 
 N'hésitez pas à explorer davantage Django en ajoutant des fonctionnalités, des modèles, des vues et des templates à votre projet. Bonne exploration et développement ! 🚀
