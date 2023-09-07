@@ -47,6 +47,5 @@ RUN apt-get install -y podman-compose
 # Exécutez podman-compose avec un nom de projet spécifié
 RUN podman-compose -p monprojet up
 
-
 # Exposez le port 8000
 EXPOSE 8000
