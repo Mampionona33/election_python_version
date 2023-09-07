@@ -5,7 +5,7 @@
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
     "initialize env": {
-      "name": "check django version",
+      "name": "run dev",
       "command": "python3 ./app/manage.py runserver 0.0.0.0:8000",
       "runAtStart": true,
       "preview": {
