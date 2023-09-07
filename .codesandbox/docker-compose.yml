@@ -7,6 +7,9 @@ services:
       - .:/app
     ports:
       - "8000:8000"
+    environment:
+      DJANGO_DB_ENGINE: sqlite3
+      DJANGO_DB_NAME: /app/db.sqlite3
     depends_on:
       - db
   db:
@@ -15,3 +18,5 @@ services:
       POSTGRES_DB: mydb
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
+    # Décommentez cette ligne pour désactiver le conteneur PostgreSQL (facultatif).
+    # stop_signal: SIGINT
