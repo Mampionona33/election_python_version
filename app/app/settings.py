@@ -60,7 +60,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = [
     "https://example.com",
     "https://8000-mampionona3-electionpyt-x0p57sfsg0m.ws-eu104.gitpod.io",
-    "t7hnhy-8000.fc-eu-0.pitcher.csb.app"
+    "https://t7hnhy-8000.fc-eu-0.pitcher.csb.app"
 ]
 
 
